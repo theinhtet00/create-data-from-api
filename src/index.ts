@@ -1,13 +1,12 @@
 import express from "express";
 import cors from "cors";
-import { fetchUsers } from "./utils/api";
+import router from "./router";
 
 const app = express();
+const port = 3000;
 app.use(cors());
 
-app.get("/users/grouped", async (req, res) => {
-  const users = await fetchUsers();
-  res.json(users);
-});
+app.use(express.json());
+app.use("/api", router);
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+app.listen(port, () => console.log(`Server running on port ${port}`));
