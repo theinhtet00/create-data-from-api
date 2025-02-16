@@ -1,5 +1,5 @@
 import { Router } from "express";
-import groupedByDepartment from "./service/groupedByDepartment";
+import groupedByDepartment from "../service/groupedByDepartment";
 
 const router = Router();
 
