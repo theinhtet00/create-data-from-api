@@ -1,6 +1,6 @@
 export interface Hair {
   color: string;
-  type: string;
+  type?: string;
 }
 
 export interface Coordinate {
@@ -15,13 +15,13 @@ export interface Crypto {
 }
 
 export interface Address {
-  address: string;
-  city: string;
-  state: string;
-  stateCode: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  stateCode?: string;
   postalCode: string;
-  coordinates: Coordinate;
-  country: string;
+  coordinates?: Coordinate;
+  country?: string;
 }
 
 export interface Bank {
@@ -34,38 +34,38 @@ export interface Bank {
 
 export interface Company {
   department: string;
-  name: string;
-  title: string;
-  address: Address;
+  name?: string;
+  title?: string;
+  address?: Address;
 }
 
 export interface User {
   id: number;
   firstName: string;
   lastName: string;
-  maidenName: string;
+  maidenName?: string;
   age: number;
   gender: string;
-  email: string;
-  phone: string;
-  username: string;
-  password: string;
-  birthdate: string;
-  image: string;
-  bloodGroup: string;
-  height: number;
-  weight: number;
-  eyeColor: string;
+  email?: string;
+  phone?: string;
+  username?: string;
+  password?: string;
+  birthdate?: string;
+  image?: string;
+  bloodGroup?: string;
+  height?: number;
+  weight?: number;
+  eyeColor?: string;
   hair: Hair;
-  ip: string;
+  ip?: string;
   address: Address;
-  macAddress: string;
-  universtiy: string;
-  bank: Bank;
+  macAddress?: string;
+  universtiy?: string;
+  bank?: Bank;
   company: Company;
-  esin: string;
-  ssn: string;
-  userAgent: string;
-  crypto: Crypto;
-  role: string;
+  esin?: string;
+  ssn?: string;
+  userAgent?: string;
+  crypto?: Crypto;
+  role?: string;
 }
