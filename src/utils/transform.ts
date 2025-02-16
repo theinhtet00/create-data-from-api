@@ -23,22 +23,17 @@ export function groupUsersByDepartment(users: User[]) {
 
     const deptData = grouped.get(department);
 
-    // Count gender
     if (gender === "male") deptData.male++;
     else if (gender === "female") deptData.female++;
 
-    // Track age range
     deptData.ageRange.min = Math.min(deptData.ageRange.min, age);
     deptData.ageRange.max = Math.max(deptData.ageRange.max, age);
 
-    // Count hair color
     deptData.hair.set(hairColor, (deptData.hair.get(hairColor) || 0) + 1);
 
-    // Store user postal code
     deptData.addressUser.set(fullName, postalCode);
   }
 
-  // Convert Maps to Objects
   return Object.fromEntries(
     [...grouped.entries()].map(([dept, data]) => [
       dept,
